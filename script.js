@@ -48,6 +48,26 @@ const createMonster =  (id, name, superPower, area) => ({
         superPower,
         area,
     });
-    
-console.log(createMonster(1, "Ktulhu", "Telekineses","Ocean"));
-console.log(createMonster(2, "elder", "intelligence","cave"));
+
+// console.log(createMonster(1, "Ktulhu", "Telekineses","Ocean"));
+// console.log(createMonster(2, "elder", "intelligence","cave"));
+const ktulhu = createMonster(1, "Ktulhu", "Telekineses","Ocean");
+const elder = createMonster(2, "elder", "intelligence","cave");
+
+console.log(ktulhu.name);
+
+
+// const key = prompt("please type a prop name");
+// console.log(ktulhu[key]);
+
+// for (const key in ktulhu) {
+//     if (ktulhu.hasOwnProperty(key)) {
+//         const value = ktulhu[key];
+//         console.log(value, key);
+//     }
+// }
+
+const ktulhuV2 = ktulhu;
+ktulhuV2.ability = "Kill";
+delete ktulhuV2.ability;
+console.log(ktulhu, ktulhuV2);
